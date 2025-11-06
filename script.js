@@ -1,13 +1,13 @@
 //Selecione os elementos das luzes
-const luzVermelho = document.getElementsById("vermelho");
-const luzAmarelo = document.getElementsById("amarelo");
-const luzVerde = document.getElementsById("verde");
+const luzVermelho = document.getElementById("vermelho");
+const luzAmarelo = document.getElementById("amarelo");
+const luzVerde = document.getElementById("verde");
 // Botões
-const btnVermelho = document.getElementsById("btnVermelho");
-const btnAmarelo = document.getElementsById("btnAmarelo");
-const btnVerde = document.getElementsById("btnVerde");
-const btnAuto = document.getElementsById("btnAuto");
-const btnParar = document.getElementsById("btnParar");
+const btnVermelho = document.getElementById("btnVermelho");
+const btnAmarelo = document.getElementById("btnAmarelo");
+const btnVerde = document.getElementById("btnVerde");
+const btnAuto = document.getElementById("btnAuto");
+const btnParar = document.getElementById("btnParar");
 // Variável para o modo automático
 let intervalo;
 
@@ -46,3 +46,9 @@ function parar(){
     clearInterval(intervalo);
     limpar();
 }
+
+btnParar.onclick = parar;
+btnAuto.onclick = modoAutomatico;
+btnVerde.onclick = acenderVerde;
+btnAmarelo.onclick = acenderAmarelo;
+btnVermelho.onclick = acenderVermelho;
