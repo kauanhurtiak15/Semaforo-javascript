@@ -41,3 +41,8 @@ function modoAutomatico(){
         estado = (estado + 1) % 3;
     },1000)
 }
+
+function parar(){
+    clearInterval(intervalo);
+    limpar();
+}
